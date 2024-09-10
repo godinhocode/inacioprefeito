@@ -1,0 +1,388 @@
+/* ------------------------------------------------------------------------GENERAL CONFIGS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+
+  transition: 0.2s linear;
+}
+
+body {
+  text-align: left;
+
+  background-color: rgb(243, 243, 243);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgb(250, 212, 40);
+  border-radius: 5rem;
+}
+/* ---------------------------------------------------------------------------------FONTS */
+@font-face {
+  font-family: 'Maisee';
+  src: url('./fonts/MaiseeBoldW01-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MaiseeThin';
+  src: url('./fonts/MaiseeBookW05-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'EastmenBold';
+  src: url(./fonts/EastmanTrial-Extrabold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'EastmenNormal';
+  src: url(./fonts/EastmanRomanTrial-DemiBold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'TTNeoris-Bold';
+  src: url(./fonts/TT\ Neoris\ Trial\ Bold.ttf) format('opentype');
+}
+
+@font-face {
+  font-family: 'TheConstelation';
+  src: url(./fonts/The\ Constellation.ttf) format('opentype');
+}
+
+.header {
+  display: flex;
+justify-content: center;
+align-items: center;
+  height: auto;
+  width: 100%;
+  background-color: rgb(1, 84, 151);
+  padding: 1.5rem;
+  gap: 6rem;
+  
+}
+
+.header img {
+  width: 60%;
+}
+
+.header h1 {
+  color: white;
+  padding: 0;
+  margin: 0;
+  font-family: 'TheConstelation';
+}
+
+figcaption {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'TTNeoris-Bold';
+}
+
+.content {
+  padding: 2rem;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: rgb(1, 84, 151);
+  font-size: 3rem;
+  font-family: 'EastmenBold';
+  line-height: 3.3rem;
+}
+
+p {
+  color: black;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-family: 'MaiseeThin';
+}
+
+/* -------------------------------------------------------------------------NEWS SECTION*/
+.title {
+  padding: 2rem;
+}
+.carousel-news {
+  overflow: hidden;
+  width: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-backface-hidden,
+.swiper-slide {
+  margin-top: 0.5rem;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#news {
+  padding: 20px;
+  background-color: rgb(1, 84, 151);
+  margin-top: 3rem;
+}
+
+.news-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  width: 30rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 2rem;
+
+  padding-bottom: 10px;
+}
+
+.news-item img {
+  width: 180px;
+
+  margin-right: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-news {
+  overflow-x: hidden;
+  display: flex;
+  gap: 4rem;
+}
+
+.news-content {
+  max-width: 100%;
+}
+
+h1.news {
+  color: rgb(250, 212, 40);
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  color: rgb(250, 212, 40);
+  font-size: 2rem;
+}
+
+.news-content h3 {
+  font-family: 'EastmenBold';
+  margin: 0 0 0.2rem 0;
+  font-size: 2rem;
+}
+
+.news-content p,
+#news p {
+  color: white;
+  margin-bottom: 0;
+}
+
+.news-date {
+  font-size: 0.9em;
+  color: #888;
+  margin-bottom: 1rem !important;
+}
+
+.read-more {
+  color: rgb(250, 212, 40);
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.news-summary {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1000px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    background-color: rgb(1, 84, 151);
+    padding: 1rem;
+    gap: 50%;
+  }
+
+  .header img {
+    width: 60%;
+    
+  }
+
+  .header h1 {
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-family: 'TheConstelation';
+  }
+
+  figcaption {
+    font-size: 1rem;
+
+    text-align: center;
+    font-family: 'TTNeoris-Bold';
+  }
+
+  .content p {
+    padding-inline: 25rem;
+  }
+
+  img {
+    width: 50%;
+    display: flex;
+    margin-inline: auto;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+    color: rgb(1, 84, 151);
+    font-size: 3rem;
+    font-family: 'EastmenBold';
+    line-height: 3.3rem;
+    padding-inline: 25rem;
+  }
+
+  #news-summary {
+    color: black;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-family: 'MaiseeThin';
+    padding-inline: 25rem;
+  }
+
+  /* -------------------------------------------------------------------------NEWS SECTION*/
+
+  .carousel-news {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+  }
+
+  .swiper-backface-hidden,
+  .swiper-slide {
+    margin-top: 0.5rem;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #news {
+    padding-inline: 15rem;
+    background-color: rgb(1, 84, 151);
+    margin-top: 3rem;
+  }
+
+  .news-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    width: 30rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 2rem;
+
+    padding-bottom: 10px;
+  }
+
+  .news-item img {
+    width: 30rem;
+
+    margin-right: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  .carousel-news {
+    overflow-x: hidden;
+    display: flex;
+    gap: 4rem;
+  }
+
+  .news-content {
+    max-width: 100%;
+  }
+
+  h1.news {
+    color: rgb(250, 212, 40);
+    font-size: 4rem;
+    margin-top: 2rem;
+    text-align: center;
+    padding: 0;
+  }
+
+  .news-content h3 {
+    font-family: 'EastmenBold';
+    margin: 0 0 1rem 0;
+    font-size: 4rem;
+  }
+
+
+  .keepup{
+    text-align: center;
+  }
+
+  .news-content p {
+    text-align: left;
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 0;
+    margin-top: -0.7rem;
+    padding: 0.5rem 0 0.5rem 0;
+  }
+
+  .news-date {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 1rem !important;
+  }
+
+  .read-more {
+    color: rgb(250, 212, 40);
+    text-decoration: none;
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .news-summary {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+}

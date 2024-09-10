@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Google tag (gtag.js) -->
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-08X4TLT9JS"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-08X4TLT9JS')
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./imagens/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./imagens/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./imagens/favicon-16x16.png"
+    />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Inácio Franco Prefeito" />
+    <meta
+      property="og:description"
+      content="Experiência e Juventude, vote 22"
+    />
+
+    <!-- Imagem para WhatsApp e outras plataformas -->
+    <meta
+      property="og:image"
+      content="https://i.postimg.cc/s2Px8CDK/og-image.jpg"
+    />
+
+    <!-- Imagem específica para Instagram -->
+    <meta
+      property="og:image:secure_url"
+      content="https://i.postimg.cc/4dKTHjFs/og-image2.jpg"
+    />
+
+    <meta property="og:url" content="https://inacioprefeito2024.web.app" />
+    <meta property="og:type" content="website" />
+    <link rel="manifest" href="./imagens/site.webmanifest" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Incluindo os scripts Firebase na versão compatível com a inclusão direta -->
+    <!--FIREBASE SCRIPT------------>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+    <title>Inácio Franco Prefeito</title>
+  </head>
+  <body>
+    <div id="volume-notice" class="hidden">
+      <p class="jingle">Reproduzir o Nosso Jingle?</p>
+      <div class="buttonsJingle">
+        <button id="play-jingle">SIM</button>
+        <button id="no-jingle">NÃO</button>
+      </div>
+    </div>
+
+    <!-- ------------------------------------Home Sessão Starts here ---------->
+
+    <section id="home">
+      <div class="LargeScreenHome">
+        <div id="logo-containerLarge">
+          <img class="welcome" src="./imagens/welcome.png" alt="" />
+          <img id="logo-22Large" src="./imagens/logo.png" alt="logo 22" />
+        </div>
+      </div>
+
+      <img
+        id="candidate-photo"
+        class="candidate-photo"
+        src="imagens/InacioeLuiz.jpg"
+        alt="Foto do Candidato"
+      />
+
+      <div id="logo-container">
+        <img id="logo-22" src="./imagens/logo.png" alt="logo 22" />
+      </div>
+
+      <div class="logo-inacio">
+        <img src="./imagens/logo-inacio.png" alt="logo-inacio" />
+      </div>
+    </section>
+
+    <!-- ------------------------------------Home Section ends here ---------->
+
+    <!-- ------------------------------------About Sessão starts here ---------->
+
+    <section id="about">
+      <div class="largeScreenAbout">
+        <div class="image-colum">
+          <img
+            class="InacioeLuizLargeScreen"
+            src="./imagens/InacioeLuizAboutLargeScreen.png"
+            alt="Foto Inácio e Luiz Lima sessão About"
+          />
+        </div>
+
+        <div class="text-colum">
+          <img
+            src="./imagens/experiência e juventude.png"
+            alt="Logo Experiência E Juventude"
+            class="experienciaLargeScreen"
+          />
+
+          <h2 class="about-textLargeScreen">
+            Inácio Franco é um nome que Pará de Minas conhece bem. Empresário,
+            empreendedor e produtor rural, ele já esteve à frente da nossa
+            cidade, trazendo progresso, desenvolvimento e, acima de tudo,
+            momentos de felicidade para nossa gente. Sob sua liderança, vivemos
+            tempos de crescimento e harmonia. <br /><br />
+
+            Hoje, Inácio retorna com o mesmo compromisso e dedicação, mas agora,
+            ao lado de uma nova força: Luiz Lima, um jovem vereador que traz
+            consigo a energia e a inovação que nossa cidade precisa para
+            enfrentar os desafios de um mundo em constante mudança. Juntos, eles
+            representam a união perfeita entre a sabedoria de quem já fez e a
+            ousadia de quem quer fazer mais. Pará de Minas tem a oportunidade de
+            reviver os bons tempos, mas com a certeza de que o futuro será ainda
+            mais promissor.
+          </h2>
+        </div>
+      </div>
+      <h1 class="about">
+        Experiência que construiu o passado. Juventude que molda o futuro.
+      </h1>
+
+      <h2 class="about-text">
+        Inácio Franco é um nome que Pará de Minas conhece bem. Empresário,
+        empreendedor e produtor rural, ele já esteve à frente da nossa cidade,
+        trazendo progresso, desenvolvimento e, acima de tudo, momentos de
+        felicidade para nossa gente. Sob sua liderança, vivemos tempos de
+        crescimento e harmonia. <br /><br />
+
+        Hoje, Inácio retorna com o mesmo compromisso e dedicação, mas agora, ao
+        lado de uma nova força: Luiz Lima, um jovem vereador que traz consigo a
+        energia e a inovação que nossa cidade precisa para enfrentar os desafios
+        de um mundo em constante mudança. Juntos, eles representam a união
+        perfeita entre a sabedoria de quem já fez e a ousadia de quem quer fazer
+        mais. Pará de Minas tem a oportunidade de reviver os bons tempos, mas
+        com a certeza de que o futuro será ainda mais promissor.
+      </h2>
+    </section>
+    <!-- ------------------------------------About Section ends here ---------->
+
+    <!-- ------------------------------------Galery Section starts here ---------->
+
+    <section id="galery">
+      <div class="galery">
+        <h1 class="GaleryTitle">Inácio Franco fez!</h1>
+        <div class="textLargeScreenGalery">
+          <h1>
+            Inácio Franco <br />
+            fez!
+          </h1>
+
+          <h2>
+            Confira a galeria <br />
+            ao lado com algumas <br />
+            das obras feitas por <br />
+            Inácio Franco para <br />
+            nossa Cidade
+          </h2>
+        </div>
+        <p class="Paragraph">
+          Confira abaixo a galeria com algumas das principais contribuições de
+          Inácio Franco para a nossa cidade.
+        </p>
+
+        <div class="carousel">
+          <div class="carousel-track">
+            <div class="carousel-item video-item">
+              <div class="video-placeholder">
+                <img
+                  src="./imagens/Galery/videothumb.jpg"
+                  alt="Video Thumbnail"
+                />
+                <span class="play-icon">▶</span>
+              </div>
+              <video class="full-video" controls>
+                <source
+                  src="./imagens/Galery/240813 - Apresentação do Inácio (para o site).mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <div class="carousel-caption">
+                Clique no botão de play e veja aqui o vídeo de apresentação e
+                visão de Inácio Franco para a nossa cidade.
+              </div>
+            </div>
+
+            <div class="carousel-item video-item">
+              <div class="video-placeholder">
+                <img
+                  src="./imagens/Galery/thumbLuiz.jpg"
+                  alt="Video Thumbnail"
+                />
+                <span class="play-icon">▶</span>
+              </div>
+              <video class="full-video" controls>
+                <source
+                  src="./imagens/Galery/240814 - Apresentação do Luiz (para o site).mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <div class="carousel-caption">
+                Clique no botão de play e veja aqui o vídeo de apresentação e
+                visão de Luiz Lima para a nossa cidade.
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./imagens/Galery/img03.jpeg" alt="Image 1" />
+              <div class="carousel-caption">
+                Mais de cinco milhões destinados ao Hospital Nossa Senhora da
+                Conceição. Durante os mandatos de Deputado Estaual.
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="./imagens/Galery/img02.jpeg" alt="Image 2" />
+              <div class="carousel-caption">
+                Reforma realizada na Escola Estadual Coronel João Ferreira
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="./imagens/Galery/img05.jpeg" alt="Image 2" />
+              <div class="carousel-caption">
+                Construiu o Pronto Atendimento, a primeira unidade de saúde
+                instalada no Bairro Senador Valadares para atender toda a
+                população de Pará de Minas.
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="./imagens/Galery/img06.jpeg" alt="Image 2" />
+              <div class="carousel-caption">
+                Parceiro na construção do Centro de Formação Profissional Dr.
+                Celso Charuri. E abriu as portas para os cursos das escolas do
+                Senai e Sesi em Pará de Minas.
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="./imagens/Galery/img07.jpeg" alt="Image 2" />
+              <div class="carousel-caption">
+                Construiu a Creche Municipal Professora Maria Constança Torres,
+                no Bairro João Paulo II. Mais vagas e investimento no cuidado
+                com as nossas crianças.
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="./imagens/Galery/img08.jpeg" alt="Image 2" />
+              <div class="carousel-caption">
+                Como deputado estadual, enviou recursos de emenda parlamentar
+                para a construção da nova pista de skate.
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="./imagens/Galery/img09.jpeg" alt="Image 2" />
+              <div class="carousel-caption">
+                Inácio Franco, como prefeito, construiu unidades básicas de
+                saúde nos bairros Serra Verde e São Cristóvão.
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="./imagens/Galery/img10.jpeg" alt="Image 2" />
+              <div class="carousel-caption">
+                O CCZ, foi instalado pelo então prefeito Inácio Franco, no
+                Bairro João Paulo II. O órgão foi criado com o objetivo de
+                monitorar as doenças transmitidas por animais.
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="./imagens/Galery/img11.jpeg" alt="Image 2" />
+              <div class="carousel-caption">
+                Com Inácio Franco na prefeitura, foram iniciadas as obras do
+                novo terminal rodoviário de Pará de Minas, instalado próximo ao
+                trevo da BR 262.
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="./imagens/Galery/img12.jpeg" alt="Image 2" />
+              <div class="carousel-caption">
+                Inácio Franco, como prefeito, construiu a Escola Municipal
+                Professora Mércia Maria da Silva Chaves, no Bairro São Pedro.
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="./imagens/Galery/img13.jpeg" alt="Image 2" />
+              <div class="carousel-caption">
+                Na sua gestão de prefeito, Inácio Franco construiu, reformou e
+                revitalizou cerca de 13 praças, no Centro e nos bairros.
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="./imagens/Galery/img14.jpeg" alt="Image 2" />
+              <div class="carousel-caption">
+                Deu início às obras do Teatro Municipal Geraldina Campos
+                Almeida, O investimento na cultura deu a Pará de Minas o seu
+                principal espaço voltado para as artes e os espetáculos.
+              </div>
+            </div>
+          </div>
+          <button class="carousel-button prev">‹</button>
+          <button class="carousel-button next">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------Testimonials Section starts here ---------->
+    <section id="testimonials">
+      <h1>Depoimentos</h1>
+      <p class="testimonials">Confira os depoimentos de nossos apoiadores.</p>
+
+      <div class="swiper-container-testimonials carousel-testimonials">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide testimonials-item">
+            <video muted controls>
+              <source src="./testimonials/daniel_site.mp4" type="video/mp4" />
+              Seu browser não suporta este formato de vídeo.
+            </video>
+
+            <div class="carousel-caption">
+              Daniel Barbosa - Presidente da Federação PSDB e Cidadania
+            </div>
+          </div>
+
+          <div class="swiper-slide testimonials-item">
+            <video muted controls>
+              <source
+                src="./testimonials/Sonoras para o site - Maria Perpétua.mp4"
+                type="video/mp4"
+              />
+              Seu browser não suporta este formato de vídeo.
+            </video>
+
+            <div class="carousel-caption">
+              Maria Perpétua - Moradora do bairro Recanto da Lagoa
+            </div>
+          </div>
+
+          <div class="swiper-slide testimonials-item">
+            <video muted controls>
+              <source
+                src="./testimonials/zeze.mp4"
+                type="video/mp4"
+                codecs="hevc"
+              />
+              Seu browser não suporta este formato de vídeo.
+            </video>
+
+            <div class="carousel-caption">
+              Zezé Porfírio - Ex-Prefeito de Pará de Minas
+            </div>
+          </div>
+
+          <div class="swiper-slide testimonials-item">
+            <video muted controls>
+              <source
+                src="./testimonials/Depoimento Paulo do Esporte.mp4"
+                type="video/mp4"
+              />
+              Seu browser não suporta este formato de vídeo.
+            </video>
+
+            <div class="carousel-caption">
+              Vice-Prefeito e ex-Secretário de Esportes
+            </div>
+          </div>
+
+          <div class="swiper-slide testimonials-item">
+            <video muted controls>
+              <source
+                src="./testimonials/Sonoras para o site - Vera Lúcia.mp4"
+                type="video/mp4"
+              />
+              Seu browser não suporta este formato de vídeo.
+            </video>
+
+            <div class="carousel-caption">
+              Vera Lúcia - Moradora do bairro Santa Edwirgens
+            </div>
+          </div>
+
+          <div class="swiper-slide testimonials-item">
+            <video muted controls>
+              <source
+                src="./testimonials/Depoimento Dr Everton_site.mp4"
+                type="video/mp4"
+              />
+              Seu browser não suporta este formato de vídeo.
+            </video>
+
+            <div class="carousel-caption">
+              Médico ginecologista e Vice-Presidente PSDB Pará de Minas
+            </div>
+          </div>
+
+          <div class="swiper-slide testimonials-item">
+            <video muted controls>
+              <source
+                src="./testimonials/Depoimento Dr Gilberto 1 - Saúde da Família.mp4"
+                type="video/mp4"
+              />
+              Seu browser não suporta este formato de vídeo.
+            </video>
+
+            <div class="carousel-caption">
+              Médico ortopedista e ex-secretário Municipal de Saúde
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------Testimonials Links Section Ends here ---------->
+
+    <!-- ------------------------------------News Section Starts here ---------->
+
+    <section id="news">
+      <h1 class="news">Últimas Notícias</h1>
+      <p class="news-p">acompanhe nossas últimas notícias e participações</p>
+
+      <div class="swiper-container-news carousel-news">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide news news-item">
+            <img src="imagens/news/capapipas.jpg" alt="Pipa 22" />
+            <div class="news-content">
+              <h3>Festival de Pipas e Papagaios</h3>
+              <p class="news-date">01-09-2024</p>
+              <p class="news-summary">
+                Foi realizado ontem no parque de exposições o famoso "Chicão" o
+                festival de pipas e papagaios...
+              </p>
+              <a href="noticia.html?newsId=5" class="read-more">Leia mais</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide news-item">
+            <img src="imagens/news/podcast.jpg" alt="Depoimento" />
+            <div class="news-content">
+              <h3>Podcast "Minha Pará de Minas"</h3>
+              <p class="news-date">27-08-2024</p>
+              <p class="news-summary">
+                Inácio Franco participou do podcast "Minha Pará de Minas"
+                apresentado por Thiago Verli...
+              </p>
+              <a href="noticia.html?newsId=4" class="read-more">Leia mais</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide news-item">
+            <img src="imagens/news/futsal1.jpg" alt="Gepam" />
+            <div class="news-content">
+              <h3>Jepam Pará de Minas</h3>
+              <p class="news-date">22-08-2024</p>
+              <p class="news-summary">
+                A importancia do esporte em nossa cidade começa com apoio a
+                nossos torneios
+              </p>
+              <a href="noticia.html?newsId=1" class="read-more">Leia mais</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide news-item">
+            <img src="imagens/news/fichalimpa.jpg" alt="Gepam" />
+            <div class="news-content">
+              <h3>Inácio é Ficha Limpa!</h3>
+              <p class="news-date">21-08-2024</p>
+              <p class="news-summary">
+                O Supremo Tribunal Federal acaba de julgar improcedente o pedido
+                de condenação de Inácio Franco...
+              </p>
+              <a href="noticia.html?newsId=2" class="read-more">Leia mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------News Section ends here ---------->
+
+    <!-- ------------------------------------User Iteraction Section starts here ---------->
+
+    <section id="userInteraction">
+      <h1>Perguntas e Respostas</h1>
+
+      <section id="QeA">
+        <form id="question-form">
+          <textarea
+            id="question-input"
+            placeholder="Digite aqui sua pergunta"
+            rows="4"
+            required
+          ></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+
+        <div id="questions-carousel" class="swiper-container questions-swiper">
+          <div class="swiper-wrapper" id="questions-list">
+            <!-- Perguntas e respostas serão adicionadas aqui dinamicamente -->
+          </div>
+        </div>
+      </section>
+
+      <div id="support-section">
+        <img src="./imagens/toCom.png" alt="" />
+        <h2 class="support">Clique no botão e selecione sua foto ou vídeo</h2>
+        <form id="support-form">
+          <div class="custom-file-upload">
+            <label for="support-file">Selecionar Arquivo</label>
+            <input
+              type="file"
+              id="support-file"
+              accept="image/*,video/*, .pdf"
+            />
+          </div>
+
+          <button class="upload" type="submit">Enviar</button>
+        </form>
+        <span id="file-name">Nenhum arquivo selecionado</span>
+        <p class="supportParagraph">
+          Faça parte da nossa campanha envie fotos e vídeos!
+        </p>
+        <div id="support-gallery"></div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------User Iteraction Section ends here ---------->
+
+    <!-- ------------------------------------Social Links Section Starts here ---------->
+
+    <section id="social-links">
+      <div class="largeScreenSocial">
+        <div class="titleLarge">
+          <h1><span>Pará de Minas</span> em boas mãos</h1>
+          <p class="large">Nos siga nas redes sociais</p>
+        </div>
+
+        <div class="inacio-socialsLarge">
+          <img
+            src="./imagens/inacioSocialLarge.png"
+            alt="Inácio Franco Foto Rede Social"
+          />
+
+          <div class="social-butonsInacio">
+            <a
+              id="instagram-link"
+              href="https://instagram.com/inaciofranco_oficial"
+              class="button instagram"
+            >
+              Instagram
+              <svg
+                width="22px"
+                viewBox="0 0 20 20"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <title>instagram [#167]</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1">
+                  <g
+                    id="Dribbble-Light-Preview"
+                    transform="translate(-340.000000, -7439.000000)"
+                  >
+                    <g id="icons" transform="translate(56.000000, 160.000000)">
+                      <path
+                        d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792"
+                        id="instagram-[#167]"
+                      ></path>
+                    </g>
+                  </g>
+                </g></svg
+            ></a>
+            <a
+              id="facebook-link"
+              href="https://www.facebook.com/InacioFranco2024/"
+              class="button facebook"
+              >Facebook
+              <svg
+                width="25px"
+                viewBox="0 0 32 32"
+                id="icon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: none;
+                    }
+                  </style>
+                </defs>
+                <title>logo--facebook</title>
+                <path
+                  d="M26.67,4H5.33A1.34,1.34,0,0,0,4,5.33V26.67A1.34,1.34,0,0,0,5.33,28H16.82V18.72H13.7V15.09h3.12V12.42c0-3.1,1.89-4.79,4.67-4.79.93,0,1.86,0,2.79.14V11H22.37c-1.51,0-1.8.72-1.8,1.77v2.31h3.6l-.47,3.63H20.57V28h6.1A1.34,1.34,0,0,0,28,26.67V5.33A1.34,1.34,0,0,0,26.67,4Z"
+                  transform="translate(0 0)"
+                />
+                <rect
+                  id="_Transparent_Rectangle_"
+                  data-name="&lt;Transparent Rectangle&gt;"
+                  class="cls-1"
+                  width="32"
+                  height="32"
+                /></svg
+            ></a>
+          </div>
+        </div>
+
+        <div class="luiz-socialsLarge">
+          <img
+            class="luizInverted"
+            src="./imagens/luizInverted.png"
+            alt="Inácio Franco Foto Rede Social"
+          />
+
+          <img
+            class="LuizNormal"
+            src="./imagens/luizSocialLarge.png"
+            alt="Inácio Franco Foto Rede Social"
+          />
+
+          <div class="social-butonsLuiz">
+            <a
+              id="instagram-link"
+              href="https://www.instagram.com/luizlimapm/"
+              class="button instagram"
+            >
+              Instagram
+              <svg
+                width="22px"
+                viewBox="0 0 20 20"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <title>instagram [#167]</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1">
+                  <g
+                    id="Dribbble-Light-Preview"
+                    transform="translate(-340.000000, -7439.000000)"
+                  >
+                    <g id="icons" transform="translate(56.000000, 160.000000)">
+                      <path
+                        d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792"
+                        id="instagram-[#167]"
+                      ></path>
+                    </g>
+                  </g>
+                </g></svg
+            ></a>
+            <a
+              id="facebook-link"
+              href="https://www.facebook.com/luizlimapm"
+              class="button facebook"
+              >Facebook
+              <svg
+                width="25px"
+                viewBox="0 0 32 32"
+                id="icon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: none;
+                    }
+                  </style>
+                </defs>
+                <title>logo--facebook</title>
+                <path
+                  d="M26.67,4H5.33A1.34,1.34,0,0,0,4,5.33V26.67A1.34,1.34,0,0,0,5.33,28H16.82V18.72H13.7V15.09h3.12V12.42c0-3.1,1.89-4.79,4.67-4.79.93,0,1.86,0,2.79.14V11H22.37c-1.51,0-1.8.72-1.8,1.77v2.31h3.6l-.47,3.63H20.57V28h6.1A1.34,1.34,0,0,0,28,26.67V5.33A1.34,1.34,0,0,0,26.67,4Z"
+                  transform="translate(0 0)"
+                />
+                <rect
+                  id="_Transparent_Rectangle_"
+                  data-name="&lt;Transparent Rectangle&gt;"
+                  class="cls-1"
+                  width="32"
+                  height="32"
+                /></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------Social Links Section ends here ---------->
+
+    <footer>
+      CNPJ DO CANDIDATO: 56.132.948/0001-55 Experiência e Juventude (PL, PSDB,
+      CIDADANIA)
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Adicione os scripts do Firebase modular -->
+    <script type="module">
+      // Importa o Firebase e os módulos necessários
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js'
+      import {
+        getFirestore,
+        collection,
+        addDoc
+      } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js'
+      import {
+        getStorage,
+        ref,
+        uploadBytes,
+        getDownloadURL
+      } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-storage.js'
+
+      // Configuração do Firebase
+      const firebaseConfig = {
+        apiKey: 'AIzaSyBz4NptTA06tyCwxjeWItGKH2svdEHgQJ0',
+        authDomain: 'inacioprefeito2024.firebaseapp.com',
+        databaseURL: 'https://inacioprefeito2024-default-rtdb.firebaseio.com',
+        projectId: 'inacioprefeito2024',
+        storageBucket: 'inacioprefeito2024.appspot.com',
+        messagingSenderId: '683410271147',
+        appId: '1:683410271147:web:ba9a3d13dec97e601780ee',
+        measurementId: 'G-08X4TLT9JS'
+      }
+
+      // Inicializa o Firebase
+      const app = initializeApp(firebaseConfig)
+      const db = getFirestore(app)
+      const storage = getStorage(app)
+
+      // Adicionar um arquivo ao Storage
+      document
+        .getElementById('support-form')
+        .addEventListener('submit', async e => {
+          e.preventDefault()
+
+          const file = document.getElementById('support-file').files[0]
+          if (!file) {
+            alert('Por favor, selecione um arquivo.')
+            return
+          }
+
+          const fileRef = ref(storage, `supports/${file.name}`)
+
+          try {
+            await uploadBytes(fileRef, file)
+            const url = await getDownloadURL(fileRef)
+            await addDoc(collection(db, 'supports'), {
+              fileUrl: url,
+              createdAt: new Date()
+            })
+            alert('Arquivo enviado com sucesso!')
+          } catch (error) {
+            console.error('Erro ao enviar o arquivo:', error)
+          }
+        })
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

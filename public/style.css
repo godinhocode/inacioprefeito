@@ -1,0 +1,1541 @@
+/* ------------------------------------------------------------------------GENERAL CONFIGS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+
+  transition: 0.2s linear;
+}
+
+body {
+  font-family: 'EastmenBold', Arial, sans-serif;
+  text-align: center;
+
+  background-color: #015497;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgb(250, 212, 40);
+  border-radius: 5rem;
+}
+/* ---------------------------------------------------------------------------------FONTS */
+@font-face {
+  font-family: 'Maisee';
+  src: url('./fonts/MaiseeBoldW01-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MaiseeThin';
+  src: url('./fonts/MaiseeBookW05-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'EastmenBold';
+  src: url(./fonts/EastmanTrial-Extrabold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'EastmenNormal';
+  src: url(./fonts/EastmanRomanTrial-DemiBold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'TTNeoris-Bold';
+  src: url(./fonts/TT\ Neoris\ Trial\ Bold.ttf) format('opentype');
+}
+
+@font-face {
+  font-family: 'TheConstelation';
+  src: url(./fonts/The\ Constellation.ttf) format('opentype');
+}
+
+/* -------------------------------------------------------------------------TEXT CONFIGS */
+h2 {
+  font-size: 2.5rem;
+  color: rgb(1, 84, 151);
+  margin-bottom: 0.5rem;
+}
+
+/* -------------------------------------------------------------------------HOME SECTION*/
+
+#volume-notice {
+  margin-block: 1rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 20px;
+  background-color: rgb(1, 84, 151);
+  padding: 4px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  width: 31rem;
+  height: auto; /* Ajusta automaticamente de acordo com o conteúdo */
+}
+
+#volume-notice.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#volume-notice.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+p.jingle {
+  font-size: 1.5rem;
+  margin: 0;
+  color: rgb(255, 255, 255);
+}
+
+.buttonsJingle {
+  display: flex;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+.buttonsJingle button {
+  font-family: 'EastmenNormal';
+  border-radius: 1rem;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+#play-jingle {
+  background-color: green;
+  width: 8rem;
+}
+
+#no-jingle {
+  background-color: red;
+  border: none;
+  width: 8rem;
+}
+
+#volume-notice.hidden {
+  display: none;
+}
+
+.candidate-photo {
+  max-width: 100%;
+}
+
+.logo-inacio img {
+  max-width: 86%;
+  margin-bottom: 2rem;
+}
+
+/* Estilo inicial do contêiner */
+/* Estilo inicial do contêiner */
+#logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+  margin-top: -14vh;
+}
+
+/* Estilo inicial da imagem */
+#logo-22 {
+  width: 150px; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+}
+
+/* Animação de escalonamento */
+@keyframes escalonar {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+}
+
+/* Aplica a animação à imagem */
+#logo-22 {
+  animation: escalonar 2s ease-in-out;
+}
+
+#about {
+  padding: 3rem 2rem 5rem;
+}
+
+/* -------------------------------------------------------------------------ABOUT SECTION*/
+
+.about {
+  font-family: 'EastmenBold';
+  color: rgb(250, 212, 40);
+  line-height: 2.6rem;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-text {
+  font-family: 'EastmenNormal';
+  font-size: 1.3rem;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  line-height: 2rem;
+
+  margin-bottom: 1.5rem;
+}
+
+/* -------------------------------------------------------------------------GALERY SECTION*/
+#galery {
+  background-color: rgb(255, 255, 255);
+  font-family: 'EastmenBold';
+  font-size: 2rem;
+  color: rgb(1, 84, 151);
+  padding: 5rem 2rem;
+}
+
+p {
+  margin-bottom: 4rem;
+  margin-top: 0.5rem;
+  font-family: 'MaiseeThin';
+  font-size: 1.5rem;
+  color: rgb(1, 84, 151);
+}
+
+.carousel {
+  width: auto;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 -9px 13px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 1.2s ease-in-out; /* Transição suave */
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  user-select: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25); /* Sombra ao passar o mouse */
+}
+
+.carousel-item img,
+.carousel-item .video-placeholder {
+  width: 100%;
+  max-height: 50rem;
+  display: block;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.video-placeholder {
+  position: relative;
+  background-color: #000;
+}
+
+.video-placeholder img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.play-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5.5rem;
+  height: 4.3rem;
+  font-size: 4rem;
+  color: #fff;
+  pointer-events: none;
+
+  /* Novo estilo para o fundo */
+  background-color: rgba(112, 0, 0, 0.849); /* Azul com transparência */
+  border-radius: 1.5rem; /* Borda arredondada */
+  padding: 0.5rem; /* Espaçamento ao redor do ícone */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para maior destaque */
+}
+
+.full-video {
+  display: none;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.carousel-caption {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  font-family: 'MaiseeThin';
+  padding: 1rem;
+  background: rgb(1, 84, 151); /* Fundo semitransparente */
+  width: 100%; /* Ocupa toda a largura do item */
+  height: 100%;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.carousel-button.prev {
+  left: 1rem;
+  width: 3.5rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
+  width: 3.5rem;
+}
+
+/* Estilo para o Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.modal video {
+  margin-inline: auto;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Estilo para o botão de fechar */
+.modal-close {
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo para o texto ao lado do botão de fechar */
+.modal-close-text {
+  position: absolute;
+  top: 2rem;
+  left: 35%;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  margin-left: 10px;
+}
+/* Desativa a rolagem e arrasto horizontal da galeria quando o modal está aberto */
+.modal-open .container {
+  overflow: hidden; /* Desativa rolagem do container */
+  touch-action: none; /* Desativa a interação de toque */
+}
+
+.modal-open {
+  overflow: hidden; /* Impede a rolagem da página inteira */
+}
+
+/* -------------------------------------------------------------------------NEWS SECTION*/
+
+.carousel-news {
+  overflow: hidden;
+  width: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#news {
+  padding: 5rem 2rem;
+  background-color: rgb(250, 212, 40);
+}
+
+.news-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  width: 30rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-item img {
+  width: 180px;
+  height: 130px;
+  margin-right: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+.news-p {
+  margin-bottom: 2rem;
+}
+
+.carousel-news {
+  overflow-x: hidden;
+  display: flex;
+  gap: 4rem;
+}
+
+.news-content {
+  max-width: 600px;
+}
+
+h1.news {
+  color: rgb(1, 84, 151);
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+h3 {
+  color: rgb(1, 84, 151);
+  font-size: 2rem;
+}
+
+.news-content h3 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.news-date {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  color: rgb(1, 84, 151);
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.news-summary {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+/* -------------------------------------------------------------------------NEWS SECTION ENDS*/
+
+/* -------------------------------------------------------------------------TESTIMONIALS SECTION STARTS*/
+
+.carousel-testimonials {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto; /* Centraliza a galeria */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#testimonials {
+  overflow-x: hidden;
+  padding: 5rem 2rem 6rem;
+
+  justify-content: center;
+  align-items: center;
+  background: url(./imagens/Galery/bg-testimonials.jpg) top left / cover
+    no-repeat;
+}
+
+#testimonials h1 {
+  color: rgb(250, 212, 40);
+  font-size: 3rem;
+}
+
+p.testimonials {
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.testimonials-item {
+  display: block;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 90%;
+}
+
+/* Estilo do vídeo */
+.swiper-slide video {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px; /* Bordas arredondadas para o vídeo */
+  outline: none; /* Remove a borda azul ao focar */
+}
+
+/* Garante que o vídeo não entre em fullscreen automaticamente */
+.swiper-slide video {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: contain; /* Ajusta o vídeo para preencher o contêiner */
+  outline: none; /* Remove a borda azul ao focar */
+}
+
+/* -------------------------------------------------------------------------TESTIMONIALS SECTION ENDS*/
+
+#userInteraction {
+  padding: 5rem 2rem;
+  background: url(./imagens/bgUserInteraction.jpg) top left / cover no-repeat;
+}
+
+#userInteraction h1 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+#question-form {
+  display: block;
+
+  background-color: #0056b3;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  margin-bottom: 3rem;
+}
+
+#question-input {
+  height: 11rem;
+  border-radius: 2rem 2rem 0rem 0rem;
+  text-align: left;
+
+  color: #0056b3;
+  font-family: 'MaiseeThin';
+  padding: 1rem;
+
+  width: 100%; /* Faz o input usar toda a largura disponível do contêiner */
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+  white-space: normal; /* Permite que o texto quebre em várias linhas */
+  overflow-wrap: break-word; /* Quebra o texto longo para ajustar dentro do contêiner */
+  resize: none;
+}
+
+#question-input::placeholder {
+  color: #629ad6; /* Cor do placeholder */
+  text-align: center; /* Centraliza o placeholder */
+  font-size: 1.5rem;
+  padding: 3rem;
+}
+
+button {
+  width: 15rem;
+  height: 5rem;
+  margin-top: 1rem;
+  background-color: #fad429;
+  font-size: 2.5rem;
+  color: #0056b3;
+  font-family: 'EastmenBold';
+  border-radius: 1rem;
+}
+
+/* Estilos para o question-item */
+.question-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  padding: 3.5rem;
+  background-color: #0056b3;
+  margin-bottom: 3rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question-item p {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.questionarea {
+  border-radius: 0rem 2rem 2rem 2rem;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  background-color: #dcf8c6;
+  color: #00297b;
+  font-size: 1.5rem;
+  font-family: 'MaiseeThin';
+  height: 15rem;
+  resize: none;
+  box-shadow: -5px 5px 7px rgba(0, 0, 0, 0.212);
+}
+
+.questionfrase {
+  text-align: left;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.answer-container {
+  width: 100%;
+  height: 15rem;
+  border-radius: 2rem 2rem 0rem 2rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.123);
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 1.5rem;
+}
+
+.answer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.auto-resize-textarea {
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: 'MaiseeThin';
+  color: #00297b;
+
+  resize: none; /* Impede o redimensionamento manual pelo usuário */
+}
+
+.answer-form {
+  display: none;
+}
+/* Estilos para o carrossel */
+.swiper-container {
+  width: 100%;
+  height: 38rem;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-pagination-bullets{
+  color: red;
+  display: flex;
+  width: 5rem;
+}
+
+.response {
+  display: flex;
+  align-items: flex-start; /* Alinha o ícone e o texto no topo */
+  margin-bottom: 1rem; /* Espaço entre as respostas */
+}
+
+.response-text {
+  max-width: calc(
+    100% - 50px
+  ); /* Ajusta a largura máxima do texto para evitar sobreposição com o ícone */
+  word-wrap: break-word; /* Permite que o texto quebre a linha se necessário */
+}
+
+.answer-content {
+  height: 100%;
+}
+
+.user-image {
+  position: relative;
+  left: 55%;
+  bottom: 6%;
+  width: 4.3rem; /* Ajuste o tamanho conforme necessário */
+}
+
+#support-section {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#support-section img {
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+#support-form {
+  background-color: #00297b;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+button.upload {
+  width: 8rem;
+  height: 5rem;
+  margin: 0;
+  background-color: #fad429;
+  font-size: 1.5rem;
+  color: #0056b3;
+  font-family: 'EastmenBold';
+  border-radius: 1rem;
+}
+
+/* Oculta o input real */
+input[type='file'] {
+  display: none;
+}
+
+/* Estiliza o botão personalizado */
+.custom-file-upload label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.custom-file-upload label:hover {
+  background-color: #0056b3;
+}
+
+#file-name {
+  display: block;
+  margin-top: 10px;
+  color: #555;
+  font-size: 14px;
+}
+
+h2.support {
+  color: #fad429;
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+}
+
+p.supportParagraph {
+  color: white;
+  margin: initial;
+}
+
+#file-name {
+  font-family: 'MaiseeThin';
+  margin-bottom: 1rem;
+  margin-top: 0.3rem;
+  display: block;
+  color: #ffffff;
+}
+
+/* -------------------------------------------------------------------------SOCIAL SECTION*/
+
+.inacio-socials {
+  font-family: 'Maisee';
+
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.luizsocials {
+  font-family: 'Maisee';
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.luizsocials h1 {
+  font-family: 'Maisee';
+}
+.title {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+#social-links {
+  max-width: 100%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  padding: 2rem;
+
+  z-index: 100;
+
+  box-shadow: 0 -10px 10px -10px rgba(0, 0, 0, 0.5),
+    0 10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+  display: inline-block;
+
+  padding: 15px 25px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button.instagram {
+  background-color: #dd2a7b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  font-family: 'EastmenNormal';
+  font-size: 2rem;
+
+  max-width: 100%;
+}
+
+.button.instagram svg {
+  fill: rgb(255, 255, 255);
+}
+
+.button.facebook svg {
+  fill: rgb(255, 255, 255);
+}
+
+.button.instagram:hover {
+  background-color: #920042;
+}
+
+.button.facebook {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  gap: 1rem;
+  font-family: 'EastmenNormal';
+  font-size: 2rem;
+  max-width: 100%;
+  background-color: #3b5998;
+  margin-top: 1.5rem;
+  max-width: 100%;
+}
+
+.button.facebook:hover {
+  background-color: #2d4373;
+}
+
+footer {
+  font-family: 'MaiseeThin';
+  font-size: 0.8rem;
+  padding: 1rem;
+  color: rgb(255, 255, 255);
+}
+
+/* -------------------------------------------------------------------------MEDIA QUERIES*/
+.LargeScreenHome,
+.largeScreenAbout,
+.largeScreenGalery,
+.largeScreenSocial,
+.logo-container,
+.textLargeScreenGalery {
+  display: none;
+}
+
+/* A partir de 1000px, exibe os elementos para a versão de tela maior */
+@media (min-width: 1000px) {
+  .about,
+  .about-text,
+  .candidate-photo,
+  .logo-inacio,
+  .NormalSocial,
+  .GaleryTitle,
+  #logo-22,
+  #logo-container,
+  .Paragraph,
+  .luizInverted {
+    display: none;
+  }
+
+  /*======================================================================== HOME SECTION QUERY */
+
+  .LargeScreenHome {
+    position: relative;
+    background: url('./imagens/HomeBackground-Large.jpg') top left / cover
+      no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  #logo-containerLarge {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block: auto;
+    gap: 5rem;
+  }
+
+  .welcome {
+    width: 65%;
+  }
+
+  /* Estilo inicial da imagem */
+  #logo-22Large {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+  }
+
+  /* Animação de escalonamento */
+  @keyframes escalonar {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(2);
+    }
+  }
+
+  /* Aplica a animação à imagem */
+  #logo-22Large {
+    animation: escalonar 2s ease-in-out;
+  }
+
+  #logo-22Large {
+    display: flex;
+    justify-content: center;
+    width: 45rem;
+  }
+
+  #about {
+    padding: 0;
+  }
+
+  .largeScreenAbout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Cria duas colunas de tamanho igual */
+    gap: 20px; /* Espaçamento entre as colunas */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    justify-items: center;
+    padding-top: 2rem;
+  }
+
+  .experienciaLargeScreen {
+    max-width: 95%; /* Ajusta a imagem para ocupar a largura disponível na coluna */
+    margin: 0 2rem 4rem 0;
+  }
+
+  .about-textLargeScreen {
+    position: relative;
+    padding: 2rem;
+    z-index: 1;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  .about-textLargeScreen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(250, 212, 40);
+    border-radius: 20px 0 0 20px;
+    z-index: -1; /* Coloca o quadro atrás do texto */
+  }
+
+  .InacioeLuizLargeScreen {
+    width: 100%;
+    margin-top: 13rem;
+  }
+
+  /*======================================================================== GALERY SECTION QUERY */
+
+  #galery {
+    overflow-x: hidden;
+    background-color: rgb(250, 212, 40);
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 6rem;
+  }
+
+  .galery {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 55%;
+    grid-template-areas: 'Text Slide';
+    gap: 20px; /* Espaçamento entre as colunas */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    justify-items: center;
+  }
+
+  .textLargeScreenGalery {
+    grid-area: Text;
+    display: block;
+  }
+
+  .carousel {
+    grid-area: Slide;
+    width: 100%;
+  }
+
+  .textLargeScreenGalery h1 {
+    color: rgb(1, 84, 151);
+    text-align: left;
+    font-size: 7rem;
+    margin-bottom: 5rem;
+  }
+
+  .textLargeScreenGalery h2 {
+    text-align: left;
+    font-size: 3rem;
+  }
+
+  /*======================================================================== TESTIMONIALS SECTION QUERY */
+
+  #testimonials {
+    padding: 6rem;
+  }
+
+  #testimonials h1 {
+    color: rgb(250, 212, 40);
+    font-size: 7rem;
+  }
+
+  p.testimonials {
+    margin-bottom: 6rem;
+    color: white;
+  }
+
+  .testimonials-item {
+    display: block;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  /* Estilo do vídeo */
+  .swiper-slide video {
+    max-width: 100%;
+    height: auto;
+
+    border-radius: 10px; /* Bordas arredondadas para o vídeo */
+    outline: none; /* Remove a borda azul ao focar */
+  }
+
+  /* -------------------------------------------------------------------------SOCIAL SECTION QUERY*/
+
+  .largeScreenSocial {
+    display: grid;
+    width: 100%;
+
+    grid-template-areas: 'titulo titulo' 'inacio luiz';
+    grid-template-rows: 20rem 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* Espaçamento entre as colunas */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    justify-items: center;
+  }
+
+  #social-links {
+    box-shadow: none;
+    background-color: rgb(1, 84, 151);
+    padding: 0;
+  }
+
+  .largeScreenSocial img {
+    width: 40%;
+  }
+
+  .titleLarge {
+    grid-area: titulo;
+    text-align: center;
+
+    font-size: 4rem;
+  }
+
+  .titleLarge span {
+    color: rgb(250, 212, 40);
+  }
+
+  .titleLarge h1 {
+    color: rgb(255, 255, 255);
+    margin-top: 1rem;
+  }
+
+  .titleLarge p {
+    font-size: 3rem;
+    margin-bottom: 0;
+    color: rgb(250, 250, 250);
+  }
+
+  .inacio-socialsLarge {
+    grid-area: inacio;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(250, 212, 40);
+    border-radius: 0 2rem;
+  }
+
+  .luiz-socialsLarge {
+    grid-area: luiz;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: rgb(250, 250, 250);
+    border-radius: 2rem 0;
+  }
+
+  .social-butonsInacio {
+    margin-right: 10rem;
+    width: 40rem;
+  }
+  .social-butonsLuiz {
+    margin-left: 10rem;
+    width: 40rem;
+  }
+
+  .button.instagram {
+    height: 8rem;
+    font-size: 3rem;
+  }
+
+  .button.facebook {
+    height: 8rem;
+    font-size: 3rem;
+  }
+
+  .button.facebook svg {
+    width: 5rem;
+  }
+
+  .button.instagram svg {
+    width: 4rem;
+  }
+
+  .social-buttonsLuiz {
+    margin-left: 10rem;
+    width: 40rem;
+  }
+
+  /* -------------------------------------------------------------------------NEWS SECTION QUERY*/
+
+  #news {
+    padding: 6rem;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .news-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    width: 30rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 2rem;
+    text-align: left;
+
+    padding-bottom: 10px;
+  }
+
+  .news-item img {
+    width: 50rem;
+    height: auto;
+    margin-right: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  .news-p {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: -0.5rem;
+  }
+
+  h1.news {
+    color: rgb(1, 84, 151);
+    font-size: 7rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  .news-content h3 {
+    margin: 0;
+    font-size: 4rem;
+  }
+
+  .news-date {
+    font-size: 1.5rem;
+    color: rgb(1, 84, 151);
+    margin-bottom: 1rem;
+  }
+
+  .read-more {
+    color: rgb(1, 84, 151);
+    text-decoration: none;
+    font-size: 2rem;
+  }
+
+  .news-summary {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* -------------------------------------------------------------------------USER INTERACTION SECTION QUERY*/
+
+  #userInteraction {
+    padding: 6rem;
+    background: url(./imagens/Galery/bg-testimonials.jpg) top left / cover
+      no-repeat;
+  }
+
+  #QeA {
+    height: 100%;
+    display: grid;
+    width: 100%;
+    grid-template-areas: 'titulo titulo' 'questions ansewers';
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  #question-input::placeholder {
+    color: #629ad6; /* Cor do placeholder */
+    text-align: center; /* Centraliza o placeholder */
+    font-size: 1.5rem;
+    padding: 8rem;
+  }
+
+  #userInteraction h1 {
+    font-size: 7rem;
+    color: white;
+    margin-bottom: 4rem;
+  }
+
+  .question-item {
+    margin-bottom: 0;
+  }
+
+  #question-form {
+    grid-area: questions;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  #question-input {
+    height: 20rem;
+  }
+
+  #questions-carousel {
+    grid-area: ansewers;
+  }
+
+  .answer-content {
+    grid-area: ansewers;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .auto-resize-textarea {
+    width: 100%;
+    font-size: 1.5rem;
+    font-family: 'MaiseeThin';
+    color: #00297b;
+    height: 12rem;
+    resize: none; /* Impede o redimensionamento manual pelo usuário */
+  }
+
+  .user-image {
+    position: relative;
+    left: 49%;
+    bottom: 25%;
+    width: 6.3rem; /* Ajuste o tamanho conforme necessário */
+  }
+
+  #support-section {
+    width: 100%;
+    display: block;
+    background-color: initial;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 4rem;
+    padding: 1.5rem;
+  }
+
+  #support-section img {
+    width: 50%;
+    z-index: 100;
+  }
+
+  #support-form {
+    grid-area: comInacio;
+    background-color: #00297b;
+    padding: 1rem;
+    gap: 1rem;
+    height: 15rem;
+  }
+
+  button.upload {
+    grid-area: comInacio;
+    width: 14rem;
+    height: 5rem;
+    margin: 0;
+    background-color: #fad429;
+    font-size: 2.5rem;
+    color: #0056b3;
+    font-family: 'EastmenBold';
+    border-radius: 1rem;
+  }
+
+  /* Oculta o input real */
+  input[type='file'] {
+    display: none;
+  }
+
+  /* Estiliza o botão personalizado */
+  .custom-file-upload label {
+    width: 30rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    font-size: 2.5rem;
+  }
+
+  .custom-file-upload label:hover {
+    background-color: #0056b3;
+  }
+
+  #file-name {
+    grid-area: comInacio;
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
+  }
+
+  h2.support {
+    grid-area: comInacio;
+    color: #fad429;
+    font-size: 2.3rem;
+    margin-bottom: 3rem;
+  }
+
+  p.supportParagraph {
+    font-size: 2.3rem;
+    margin-top: 2rem;
+    color: white;
+  }
+
+  #file-name {
+    font-family: 'MaiseeThin';
+    margin-bottom: 1rem;
+    margin-top: 0.3rem;
+    display: block;
+    color: #ffffff;
+  }
+
+  footer {
+    background-color: rgb(1, 84, 151);
+  }
+}
+
+@media (max-width: 999px) {
+  .LuizNormal {
+    display: none;
+  }
+  .largeScreenSocial {
+    display: block;
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    justify-items: center;
+  }
+
+  #social-links {
+    box-shadow: none;
+    background-color: rgb(1, 84, 151);
+    padding: 0;
+  }
+
+  .user-image {
+    position: relative;
+    left: 55%;
+    bottom: 9%;
+    width: 4.3rem; /* Ajuste o tamanho conforme necessário */
+  }
+
+  .largeScreenSocial img {
+    width: 30%;
+  }
+
+  .titleLarge {
+    padding: 1rem;
+    grid-area: titulo;
+    text-align: center;
+
+    font-size: 2.3rem;
+  }
+
+  .titleLarge span {
+    color: rgb(250, 212, 40);
+  }
+
+  .titleLarge h1 {
+    color: rgb(255, 255, 255);
+    margin-top: 4rem;
+  }
+
+  .titleLarge p {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    color: rgb(255, 255, 255);
+  }
+
+  .inacio-socialsLarge {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(250, 212, 40);
+    box-shadow: 0 4px 40px -10px rgba(0, 0, 0, -2.5),
+      /* Aumentando o blur da sombra acima */ 0 10px 20px -10px rgba(0, 0, 0, 0.7);
+    border-radius: 0 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .luiz-socialsLarge {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0 4px 40px -10px rgba(0, 0, 0, -2.5),
+      /* Aumentando o blur da sombra acima */ 0 10px 20px -10px rgba(0, 0, 0, 0.7);
+    border-radius: 0 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .social-butonsInacio {
+    margin-right: 3rem;
+    margin-left: 1rem;
+    width: 40rem;
+  }
+
+  .social-butonsLuiz {
+    margin-right: 3rem;
+    margin-left: 1rem;
+    width: 40rem;
+  }
+
+  .button.instagram {
+    border-radius: 2rem;
+    height: 8rem;
+    font-size: 2rem;
+  }
+
+  .button.facebook {
+    border-radius: 2rem;
+    height: 8rem;
+    font-size: 2rem;
+  }
+
+  .button.facebook svg {
+    width: 3rem;
+  }
+
+  .button.instagram svg {
+    width: 2.5rem;
+  }
+
+  .social-buttonsLuiz {
+    margin-right: 3rem;
+    margin-left: 1rem;
+    width: 40rem;
+  }
+}

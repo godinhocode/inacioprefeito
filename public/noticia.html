@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./news.css" />
+    <title>Notícia</title>
+  </head>
+  <body>
+    <div class="header">
+      <a href="./index.html" class="logo"
+        ><img src="./imagens/logo-inacio.png" alt="Logo Inácio"
+      /></a>
+
+      <h1 class="header">Notícias</h1>
+    </div>
+    <section class="title">
+      <h1 id="news-title">Título da Notícia</h1>
+      <p id="news-summary">Resumo da notícia</p>
+    </section>
+
+    <section id="hero-image">
+      <figure>
+        <img id="news-image" src="" alt="Imagem da notícia" />
+        <figcaption id="news-date">Data da notícia</figcaption>
+      </figure>
+    </section>
+
+    <div class="content">
+      <p id="news-content">Conteúdo da notícia...</p>
+    </div>
+
+    <section id="news">
+      <h1 class="news">Últimas Notícias</h1>
+      <p class="keepup">acompanhe nossas últimas notícias e participações</p>
+
+      <div class="swiper-container carousel-news">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide news-item">
+            <img src="imagens/news/capapipas.jpg" alt="Pipa 22" />
+            <div class="news-content">
+              <h3>Festival de Pipas e Papagaios</h3>
+              <p class="news-date">01-09-2024</p>
+              <p class="news-summary">
+                Foi realizado ontem no parque de exposições o famoso "Chicão" o
+                festival de pipas e papagaios...
+              </p>
+              <a href="noticia.html?newsId=5" class="read-more">Leia mais</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide news-item">
+            <img src="imagens/news/podcast.jpg" alt="Depoimento" />
+            <div class="news-content">
+              <h3>Podcast "Minha Pará de Minas"</h3>
+              <p class="news-date">27-08-2024</p>
+              <p class="news-summary">
+                Inácio Franco participou do podcast "Minha Pará de Minas"
+                apresentado por Thiago Verli...
+              </p>
+              <a href="noticia.html?newsId=4" class="read-more">Leia mais</a>
+            </div>
+          </div>
+          <div class="swiper-slide news-item">
+            <img src="imagens/news/futsal1.jpg" alt="Gepam" />
+            <div class="news-content">
+              <h3>Jepam <br />Pará de Minas</h3>
+              <p class="news-date">22-08-2024</p>
+              <p class="news-summary">
+                A importancia do esporte em nossa cidade começa com apoio a
+                nossos torneios
+              </p>
+              <a href="noticia.html?newsId=1" class="read-more">Leia mais</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide news-item">
+            <img src="imagens/news/fichalimpa.jpg" alt="Gepam" />
+            <div class="news-content">
+              <h3>Inácio é Ficha Limpa!</h3>
+              <p class="news-date">21-08-2024</p>
+              <p class="news-summary">
+                O Supremo Tribunal Federal acaba de julgar improcedente o pedido
+                de condenação de Inácio Franco...
+              </p>
+              <a href="noticia.html?newsId=2" class="read-more">Leia mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="news.js"></script>
+  </body>
+</html>
