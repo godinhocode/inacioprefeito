@@ -404,6 +404,58 @@ p {
   overflow: hidden; /* Impede a rolagem da página inteira */
 }
 
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+#proposals {
+  padding: 5rem 2rem;
+  margin-top: -1rem;
+
+  background: url(./imagens/proposal-back.jpg) top left / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.proposalimg {
+  position: sticky;
+  top: 0;
+  max-width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+#proposals h1 {
+  color: #015497;
+  margin: 0;
+  font-size: 3rem;
+}
+
+#proposals img {
+  margin-top: 6rem;
+  width: 100%;
+}
+
+.prodownload {
+  padding: 2rem 4rem;
+  background-color: #015497;
+  color: white;
+  text-decoration: none;
+  border-radius: 5rem;
+  font-size: 2rem;
+  transition: background-color 0.3s ease;
+  width: 80%;
+  height: 6rem;
+}
+
+.prodownload:hover {
+  background-color: #007bff;
+}
+
 /* -------------------------------------------------------------------------NEWS SECTION*/
 
 .carousel-news {
@@ -692,7 +744,7 @@ button {
   display: flex;
 }
 
-.swiper-pagination-bullets{
+.swiper-pagination-bullets {
   color: red;
   display: flex;
   width: 5rem;
@@ -1069,6 +1121,42 @@ footer {
   .textLargeScreenGalery h2 {
     text-align: left;
     font-size: 3rem;
+  }
+
+  #proposals {
+    padding: 6rem;
+    margin-top: -1rem;
+    background: url(./imagens/proposal-back.jpg) top left / cover no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    height: 100vh;
+    gap: 5rem;
+  }
+
+  #proposals h1 {
+    font-size: 7rem;
+  }
+
+  #proposals p {
+    font-size: 3rem;
+    margin-top: 3rem;
+  }
+
+  #proposals img {
+    grid-area: 22;
+    margin-top: 6rem;
+    width: 100%;
+  }
+
+  .prodownload {
+    display: flex;
+    font-size: 3rem;
+    margin-top: 7rem;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    margin-left:4rem ;
   }
 
   /*======================================================================== TESTIMONIALS SECTION QUERY */
@@ -1464,7 +1552,7 @@ footer {
   }
 
   .titleLarge span {
-    color: rgb(250, 212, 40);
+    color: #fad428;
   }
 
   .titleLarge h1 {
