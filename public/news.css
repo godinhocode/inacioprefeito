@@ -222,6 +222,16 @@ h3 {
   margin-bottom: 1rem;
 }
 
+
+
+#news-gallery h2{
+  text-align: center;
+  font-family: 'EastmenBold';
+  color:rgb(1, 84, 151) ;
+}
+
+  
+
 @media (min-width: 1000px) {
   .header {
     display: flex;

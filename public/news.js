@@ -83,7 +83,6 @@ function initCarousel(carouselElement) {
   })
 }
 
-
 // Função para carregar os dados das notícias
 function loadNews(newsId) {
   fetch('noticias.json')
@@ -92,12 +91,44 @@ function loadNews(newsId) {
       // Encontrar a notícia com base no ID
       const news = data.find(item => item.id == newsId)
 
-      // Preencher os elementos HTML com os dados da notícia
-      document.getElementById('news-title').innerText = news.title
-      document.getElementById('news-summary').innerText = news.summary
-      document.getElementById('news-image').src = news.image
-      document.getElementById('news-date').innerText = news.date
-      document.getElementById('news-content').innerText = news.content
+      if (news) {
+        // Preencher os elementos HTML com os dados da notícia
+        document.getElementById('news-title').innerText = news.title
+        document.getElementById('news-summary').innerText = news.summary
+        document.getElementById('news-image').src = news.image
+        document.getElementById('news-date').innerText = news.date
+        document.getElementById('news-content').innerText = news.content
+
+        // Adicionar galeria de fotos se existir
+        if (news.gallery && news.gallery.length > 0) {
+          const galleryWrapper = document.querySelector('.gallery-swiper .swiper-wrapper')
+          galleryWrapper.innerHTML = '' // Limpar qualquer conteúdo existente
+          news.gallery.forEach(image => {
+            const slide = document.createElement('div')
+            slide.className = 'swiper-slide'
+            const img = document.createElement('img')
+            img.src = image
+            img.alt = 'Galeria de fotos'
+            slide.appendChild(img)
+            galleryWrapper.appendChild(slide)
+          })
+
+          // Exibir a seção da galeria
+          document.getElementById('news-gallery').style.display = 'block'
+
+          // Inicializar o swiper para a galeria
+          new Swiper('.gallery-swiper', {
+            loop: true,
+            autoplay: {
+              delay: 9000, // Tempo entre os slides (em milissegundos)
+              disableOnInteraction: true // Continua mesmo após a interação do usuário
+            },
+            slidesPerView: 1// Exibir um slide por vez
+          })
+        } else {
+          document.getElementById('news-gallery').style.display = 'none'
+        }
+      }
     })
     .catch(error => console.error('Erro ao carregar notícias:', error))
 }
@@ -109,10 +140,11 @@ const newsId = urlParams.get('newsId')
 // Carregar a notícia correspondente
 loadNews(newsId)
 
+// Inicializar o Swiper para o carrossel principal (se necessário)
 const swiper = new Swiper('.swiper-container', {
   loop: true,
   autoplay: {
-    delay: 5000, // Tempo entre os slides (em milissegundos)
+    delay: 9000, // Tempo entre os slides (em milissegundos)
     disableOnInteraction: true // Continua mesmo após a interação do usuário
   },
   slidesPerView: 1 // Exibir um slide por vez

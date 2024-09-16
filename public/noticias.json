@@ -49,5 +49,23 @@
     "image": "imagens/news/sãoLuiz01.jpg",
     "date": "Foto com os moradores do bairro São Luiz 11-09-2024",
     "content": "Na noite de ontem, às 18h30, o candidato a prefeito Inácio Franco e seu vice Luiz Lima estiveram presentes no Zezin Buffet, onde participaram de uma reunião com a Associação de Moradores e representantes do Centro Comercial do bairro São Luiz. O encontro foi uma oportunidade para que os candidatos ouvissem de perto as principais necessidades e demandas da população local, visando traçar planos para o futuro da administração da cidade. \n\nDurante a reunião, os moradores destacaram temas essenciais como segurança, infraestrutura e incentivo ao comércio local. Inácio Franco ressaltou a importância de manter um diálogo aberto com a comunidade, afirmando que a participação popular é fundamental para a construção de um governo mais próximo e eficaz. \"Ouvir as pessoas é o primeiro passo para identificar as reais necessidades e buscar soluções que atendam ao interesse de todos\"\n\nA interação com os moradores e comerciantes reforça o compromisso da candidatura de Inácio Franco e Luiz Lima em construir uma cidade mais justa e desenvolvida. Através de encontros como esse, os candidatos buscam entender os desafios diários enfrentados pela população, para que possam trabalhar em políticas públicas que realmente façam a diferença no cotidiano dos cidadãos. Serão realizadas novas visitas como essas a próxima ocorrendo no dia 13/09 também às 18:30 com os moradores de Muquém, Trindade, Condomínio Paraopeba, Condomínio Vargem Grande e Córrego do Barro. E no dia 28/09 Inácio Franco E Luiz Lima estarão ouvindo os moradores de Ascensão. Não deixe de participar e tenha sua voz ouvida!"
+  },
+
+  {
+    "id": 7,
+    "title": "Caminhada pelo Centro da Cidade",
+    "summary": "Inácio Franco e Luiz Lima realizam uma caminhada marcante em Pará de Minas.",
+    "image": "./imagens/news/caminhadacover.jpg",
+    "date": "14-09-2024",
+    "content": "No dia 14 de setembro, Inácio Franco e Luiz Lima realizaram uma caminhada que começou na Praça Melo Viana e percorreu as ruas do Rosário e Benedito Valadares, culminando na Praça José Pereira Coelho. A caminhada contou com a participação de centenas de pessoas, demonstrando um grande apoio à campanha. A animação e o entusiasmo dos participantes foram evidentes, mostrando a força e o engajamento da comunidade em torno dos candidatos.\n\nDurante o trajeto, a recepção foi calorosa, com os moradores demonstrando seu apoio através de aplausos e palavras de incentivo. O evento não só reforçou a presença dos candidatos nas ruas, mas também evidenciou o espírito positivo e a mobilização popular que caracteriza esta campanha.\n\nPara ver alguns momentos marcantes da caminhada, confira nossa galeria de fotos abaixo.",
+    "gallery": [
+      "imagens/news/caminhada1.jpg",
+      "imagens/news/caminhada2.jpg",
+      "imagens/news/caminhada3.jpg",
+      "imagens/news/caminhada4.jpg",
+
+      "imagens/news/caminhada6.jpg",
+      "imagens/news/caminhada7.jpg"
+    ]
   }
 ]
