@@ -152,6 +152,10 @@ header.active{
 #navLinks li a {
   color: #0056b3;
 }
+
+#navLinks li a:hover{
+  color:rgb(250, 212, 40) ;
+}
 /* -------------------------------------------------------------------------HOME SECTION*/
 
 #volume-notice {
@@ -1069,11 +1073,44 @@ footer {
   #logo-22,
   #logo-container,
   .Paragraph,
-  .luizInverted {
+  .luizInverted,
+  #menu-btn {
     display: none;
   }
 
   /*======================================================================== HOME SECTION QUERY */
+header{
+  z-index: 2000;
+  transform: translateY(-25rem);
+  padding: 3rem;
+  
+}
+
+
+  #navLinks.show {
+    background-color: initial;
+    display: flex;
+    flex-direction: row;
+    opacity: 1; /* Torna visível */
+    box-shadow: initial;
+  }
+  .logo-header img{
+    width: 20%;
+  }
+
+  #navLinks li {
+    margin: 0 15px;
+    
+  }
+
+  #navLinks li a{
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  #navLinks li a:hover{
+    color:rgb(250, 212, 40) ;
+  }
 
   .LargeScreenHome {
     position: relative;
