@@ -75,6 +75,83 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
+/* Estilos básicos do Header */
+header {
+  background-color: #0068d8;
+  color: white;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 0.1rem solid rgba(0, 16, 155, 0.253);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+#menu-btn {
+  font-size: 1.8rem;
+}
+
+.container img {
+  display: flex;
+  justify-content: flex-start;
+  width: 40%;
+}
+
+/* Esconde o menu no mobile inicialmente */
+
+header{
+  display: flex;
+  transform: translateY(-10rem);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+header.active{
+  transform: translateY(0rem);
+  
+
+}
+
+#navLinks {
+  max-height: 0;
+  overflow: hidden;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 0 0 0 2rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 5.54rem;
+  right: 0;
+  width: 55%;
+  list-style: none;
+  opacity: 0; /* Invisível inicialmente */
+  transition: max-height 0.5s ease, opacity 0.5s ease; /* Transição de altura e opacidade */
+}
+
+/* Ao ativar a classe show, faz o fade in */
+#navLinks.show {
+  max-height: 500px; /* Define uma altura máxima para o menu quando aberto */
+  display: flex; /* Mostra o menu em formato de coluna */
+  opacity: 1; /* Torna visível */
+}
+
+#navLinks li {
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 1.3rem;
+  list-style: none;
+}
+
+#navLinks li a {
+  color: #0056b3;
+}
 /* -------------------------------------------------------------------------HOME SECTION*/
 
 #volume-notice {
@@ -957,6 +1034,20 @@ footer {
   color: rgb(255, 255, 255);
 }
 
+.backToTopButton {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+
+  right: 2rem;
+  bottom: 12rem;
+  transform: translateY(10rem);
+}
+.backToTopButton.active {
+  transform: translateY(-0.4rem);
+  transition: 600ms;
+}
+
 /* -------------------------------------------------------------------------MEDIA QUERIES*/
 .LargeScreenHome,
 .largeScreenAbout,
@@ -1129,7 +1220,7 @@ footer {
     background: url(./imagens/proposal-back.jpg) top left / cover no-repeat;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
+
     height: 100vh;
     gap: 5rem;
   }
@@ -1156,7 +1247,7 @@ footer {
     justify-content: center;
     align-items: center;
     height: 8rem;
-    margin-left:4rem ;
+    margin-left: 4rem;
   }
 
   /*======================================================================== TESTIMONIALS SECTION QUERY */

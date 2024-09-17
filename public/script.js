@@ -104,11 +104,11 @@ document.addEventListener('DOMContentLoaded', () => {
       loop: true,
       autoplay: {
         delay: 7000,
-        disableOnInteraction: true,
+        disableOnInteraction: true
       },
       navigation: {
         nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        prevEl: '.swiper-button-prev'
       },
       loop: true,
 
@@ -126,6 +126,50 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   }
+
+  const hamburger = document.getElementById('menu-btn')
+  const navLinks = document.getElementById('navLinks')
+
+  // Abre ou fecha o menu ao clicar no botão hamburger
+  hamburger.addEventListener('click', e => {
+    navLinks.classList.toggle('show')
+    e.stopPropagation() // Evita que o clique no botão também feche o menu
+  })
+
+  // Fecha o menu ao clicar em qualquer lugar fora dele
+  document.addEventListener('click', e => {
+    if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+      navLinks.classList.remove('show')
+    }
+  })
+
+  // Unificando o comportamento de scroll para o header e o botão Back to Top
+  window.onscroll = function () {
+    const backToTopButton = document.getElementById('backToTopButton')
+    const header = document.querySelector('header')
+
+    // Mostra/esconde o botão "Back to Top"
+    if (window.scrollY > 200) {
+      backToTopButton.style.display = 'block'
+    } else {
+      backToTopButton.style.display = 'none'
+    }
+
+    // Adiciona/remove classe no header
+    if (window.scrollY > 0) {
+      header.classList.add('active')
+    } else {
+      header.classList.remove('active')
+    }
+  }
+
+  // Rola para o topo da página ao clicar no botão "Back to Top"
+  document.getElementById('backToTop').addEventListener('click', function () {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  })
 
   // Inicializa a exibição
   displayQuestions()
@@ -402,7 +446,7 @@ var swiper = new Swiper('.swiper-container-testimonials', {
     modifier: 1,
     slideShadows: true // Adiciona sombras nos slides
   },
-  
+
   loop: true, // Para fazer o loop dos slides
   on: {
     // Evento que ocorre quando o slide muda
@@ -476,7 +520,7 @@ var swiper = new Swiper('.swiper-container-news', {
   grabCursor: true,
   autoplay: {
     delay: 7000,
-    disableOnInteraction: true,
+    disableOnInteraction: true
   },
   loop: true
 })
