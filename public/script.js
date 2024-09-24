@@ -143,6 +143,67 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })
 
+    // Adição do Jingle e Aviso de Volume
+    const jingle = document.createElement('audio')
+    jingle.setAttribute('id', 'jingle')
+    jingle.setAttribute('preload', 'auto')
+    jingle.setAttribute('muted', 'muted') // Começa mutado
+    jingle.innerHTML =
+      '<source src="./sounds/jingle.mp3" type="audio/mpeg">Seu navegador não suporta esse elemento de áudio.'
+    document.body.appendChild(jingle)
+  
+    const volumeNotice = document.getElementById('volume-notice')
+  
+    // Função para mostrar o aviso com atraso de 2 segundos
+    function showVolumeNotice() {
+      setTimeout(() => {
+        volumeNotice.classList.remove('hidden')
+        volumeNotice.classList.add('fade-in')
+        startTimeout()
+      }, 2000) // Avisa 2 segundos após carregar a página
+    }
+  
+    // Função para esconder o aviso
+    function hideVolumeNotice() {
+      volumeNotice.classList.remove('fade-in')
+      volumeNotice.classList.add('fade-out')
+      setTimeout(() => {
+        volumeNotice.classList.add('hidden')
+        volumeNotice.classList.remove('fade-out')
+      }, 500) // Tempo igual ao da transição suave
+    }
+  
+    // Função para iniciar o timeout
+    function startTimeout() {
+      clearTimeout(timeoutId)
+      timeoutId = setTimeout(hideVolumeNotice, 4000)
+    }
+  
+    let timeoutId
+  
+    // Configura o botão "SIM"
+    document.getElementById('play-jingle').addEventListener('click', () => {
+      hideVolumeNotice()
+      jingle.muted = false
+      jingle.play()
+    })
+  
+    // Configura o botão "NÃO"
+    document.getElementById('no-jingle').addEventListener('click', () => {
+      hideVolumeNotice()
+    })
+  
+    // Exibe o aviso 2 segundos após a página carregar
+    showVolumeNotice()
+  
+    // Função para verificar se o volume aumentou
+    function checkVolume() {
+      if (jingle.volume > 0) {
+        jingle.muted = false
+        jingle.play()
+      }
+    }
+
   // Unificando o comportamento de scroll para o header e o botão Back to Top
   window.onscroll = function () {
     const backToTopButton = document.getElementById('backToTopButton')
@@ -162,17 +223,6 @@ document.addEventListener('DOMContentLoaded', () => {
       header.classList.remove('active')
     }
   }
-
-  // Rola para o topo da página ao clicar no botão "Back to Top"
-  document.getElementById('backToTop').addEventListener('click', function () {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
-  })
-
-  // Inicializa a exibição
-  displayQuestions()
 
   document
     .getElementById('support-file')
@@ -365,66 +415,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupModalForItems(items)
   })
 
-  // Adição do Jingle e Aviso de Volume
-  const jingle = document.createElement('audio')
-  jingle.setAttribute('id', 'jingle')
-  jingle.setAttribute('preload', 'auto')
-  jingle.setAttribute('muted', 'muted') // Começa mutado
-  jingle.innerHTML =
-    '<source src="./sounds/jingle.mp3" type="audio/mpeg">Seu navegador não suporta esse elemento de áudio.'
-  document.body.appendChild(jingle)
 
-  const volumeNotice = document.getElementById('volume-notice')
-
-  // Função para mostrar o aviso com atraso de 2 segundos
-  function showVolumeNotice() {
-    setTimeout(() => {
-      volumeNotice.classList.remove('hidden')
-      volumeNotice.classList.add('fade-in')
-      startTimeout()
-    }, 2000) // Avisa 2 segundos após carregar a página
-  }
-
-  // Função para esconder o aviso
-  function hideVolumeNotice() {
-    volumeNotice.classList.remove('fade-in')
-    volumeNotice.classList.add('fade-out')
-    setTimeout(() => {
-      volumeNotice.classList.add('hidden')
-      volumeNotice.classList.remove('fade-out')
-    }, 500) // Tempo igual ao da transição suave
-  }
-
-  // Função para iniciar o timeout
-  function startTimeout() {
-    clearTimeout(timeoutId)
-    timeoutId = setTimeout(hideVolumeNotice, 4000)
-  }
-
-  let timeoutId
-
-  // Configura o botão "SIM"
-  document.getElementById('play-jingle').addEventListener('click', () => {
-    hideVolumeNotice()
-    jingle.muted = false
-    jingle.play()
-  })
-
-  // Configura o botão "NÃO"
-  document.getElementById('no-jingle').addEventListener('click', () => {
-    hideVolumeNotice()
-  })
-
-  // Exibe o aviso 2 segundos após a página carregar
-  showVolumeNotice()
-
-  // Função para verificar se o volume aumentou
-  function checkVolume() {
-    if (jingle.volume > 0) {
-      jingle.muted = false
-      jingle.play()
-    }
-  }
 
   // Monitora mudanças de volume através das teclas de volume
   window.addEventListener('keydown', event => {

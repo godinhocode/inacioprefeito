@@ -67,5 +67,14 @@
       "imagens/news/caminhada6.jpg",
       "imagens/news/caminhada7.jpg"
     ]
+  },
+
+  {
+    "id": 8,
+    "title": "Inácio Franco dispara nas pesquisas",
+    "summary": "Inácio Franco e Luiz Lima aparecem com 70% das intenções de votos.",
+    "image": "./imagens/news/70news.jpg",
+    "date": "24-09-2024 gráfico com as intenções de votos.",
+    "content": "A 12 dias das eleições municipais, Inácio Franco confirma favoritismo na corrida pela prefeitura de Pará de Minas com 50,3% das intenções de votos.  Os dados são da pesquisa Itatiaia/Instituto VER divulgada nesta terça-feira (24).\n\nInácio Franco lidera a disputa eleitoral com cerca de 44 pontos de vantagem sobre as candidatas Andreia Paulino com 6,6% e Ana Paula Couto com 6,1%, que aparecem em segundo e terceiro lugares na pesquisa. \n\nA vantagem de Inácio Franco salta para 70% considerando apenas os votos válidos, quando são descartados os votos nulos e em branco. A segunda colocada, a candidata Andreia Paulino aparece com 9%, uma diferença de 61 pontos em relação ao primeiro colocado. \n\nA liderança de Inácio Franco na preferência dos eleitores pará-minenses mostra o reconhecimento e a credibilidade do homem público que, em mais de duas décadas, como prefeito e deputado estadual, trabalha incansavelmente por mais desenvolvimento e qualidade de vida em Pará de Minas."
   }
 ]
